@@ -1,48 +1,146 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Typography, Grid, Card, CardActions, CardMedia, CardContent } from '@mui/material';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import {
+  Typography,
+  Grid,
+  Card,
+  CardActions,
+  CardMedia,
+  CardContent,
+  Button,
+  FormControl,
+  Select,
+  InputLabel,
+  MenuItem,
+} from "@mui/material";
+
+// icons
+import SortIcon from "@mui/icons-material/Sort";
+import FilterAltOffSharpIcon from "@mui/icons-material/FilterAltOffSharp";
 
 const Products = () => {
-    const [productData, setProductData] = useState([]);
+  const [productData, setProductData] = useState([]);
+  const [totalProducts, setTotalProducts] = useState(0);
+  const [limit, setLimit] = useState(9);
+  const [sortingOrder, setSortingOrder] = useState("")
+  const [filter, setFilter] = useState("")
 
-    const getProducts = async () => {
-        let res = await axios.get(`http://localhost:8080/products`);
-        let data = res.data;
-        setProductData(data);
-    };
 
-    useEffect(() => {
-        getProducts();
-    }, []);
+  const getUrl = (url) => {
+      if(sortingOrder.length>0){
+        return (
+          url = `${url}&_sort=price&_order=${sortingOrder}`
+        )
+      }
 
-    return (
-        <div>
-            <Typography variant="h4" align='center'> Products </Typography>
+      return url;
+  }
 
-            <br />
-            <br />
+  const getProducts = async () => {
+    let url = getUrl(`http://localhost:8080/products?_limit=${limit}`)
+    let res = await axios.get(url);
+    // console.log(res);
+    const Total = res.headers["x-total-count"];
+    setTotalProducts(Total);
+    let data = res.data;
+    setProductData(data);
+  };
+  const handeLoadMore = () => {
+    if (limit <= totalProducts) {
+      setLimit(limit + 6);
+      getProducts();
+    }
+  };
 
-            <Grid container spacing={3}  >
-                {productData?.map((prod, index) => (
-                    <Grid item key={index} xs={12} sm={6} md={4} lg={4} >
-                        <Card sx = {{height : "100%"}}>
-                            <CardMedia
-                                component="img"
-                                image={prod.image}
-                                alt="product"
-                            />
-                            <CardContent>
-                                <Typography variant='h5' align='center' >{prod.title}</Typography>
-                                
-                                <Typography variant='h6'  align='center' >${prod.price}.00</Typography>
-                            </CardContent>
-                            
-                        </Card>
-                    </Grid>
-                ))}
+  useEffect(() => {
+    getProducts();
+  }, [limit, sortingOrder]);
+
+  return (
+    <div style={{ backgroundColor: "rgb(230, 230, 230)" }}>
+      <br />
+      <br />
+      <Typography variant="h4" align="center">
+        SURFSKATES
+      </Typography>
+      <br />
+      <br />
+
+      {/* sorting ang filtering container */}
+      <div style={{ margin: "0 14px" }}>
+        <Grid container justifyContent="space-between">
+          <Grid item>
+            <FormControl sx={{ m: 1, minWidth: 185 }}>
+              <InputLabel sx={{ display: "flex", alignItems: "center" }}>
+                Filter Products&nbsp; 
+                
+              <FilterAltOffSharpIcon />
+              </InputLabel>
+              <Select 
+                label="product"
+                value={filter}
+                onChange={(e) => {setFilter(e.target.value)}}
+              >
+                
+                <MenuItem value="categoryA">Low to High</MenuItem>
+                <MenuItem value="categoryB">High to Low</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid item>
+            <FormControl sx={{ m: 1, minWidth: 185 }}>
+              <InputLabel sx={{ display: "flex", alignItems: "center" }}>
+                Sort By Price&nbsp; <SortIcon />
+              </InputLabel>
+              <Select
+                label="price"
+                value={sortingOrder}
+                onChange={(e) => {setSortingOrder(e.target.value)}}
+              >
+                <MenuItem value='asc'>Low to High</MenuItem>
+                <MenuItem value='desc'>High to Low</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
+        </Grid>
+      </div>
+      <br />
+
+      {/* Products */}
+      <div style={{ margin: "0 20px" }}>
+        <Grid container spacing={3}>
+          {productData?.map((prod, index) => (
+            <Grid item key={index} xs={12} sm={6} md={4} lg={4}>
+              <Card sx={{ height: "100%" }}>
+                <CardMedia component="img" image={prod.image} alt="product" />
+                <CardContent>
+                  <Typography variant="h5" align="center">
+                    {prod.title}
+                  </Typography>
+                  <br />
+                  <Typography variant="h6" align="center">
+                    ${prod.price}.00
+                  </Typography>
+                </CardContent>
+              </Card>
             </Grid>
-        </div>
-    );
+          ))}
+        </Grid>
+
+        <br />
+        <Button
+          variant="contained"
+          color="success"
+          sx={{ display: "block", margin: "0 auto" }}
+          onClick={handeLoadMore}
+          disabled={limit >= totalProducts ? true : false}
+        >
+          Load more...
+        </Button>
+        <br />
+      </div>
+    </div>
+  );
 };
 
 export default Products;
