@@ -1,8 +1,8 @@
 # carverskateboards
 
 Anas -> Product Page
-Shruti -> Home Page
-Sarita -> Cart Page
+Sarita -> Home Page
+Shruti -> Cart Page
 Punit -> Sign In/Sign Up
 Anwar -> Payment Page
 
