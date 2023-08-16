@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap');
+body,input,button{
+    font-family: 'Urbanist', sans-serif;
+}
+#head{
+    text-align: center;
+    font-size: 54px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#line{
+    font-size: 22px;
+    text-align: left;
+}
+#main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 35px;
+}
+#Signupmain{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+   width: 70%;
+   margin: auto;
+}
+#sign{
+    background-color: whitesmoke
+    
+}
+#reg{
+    background-color: rgb(214, 213, 213);
+    
+}
+#login_email{
+    width: 350px;
+    height: 50px;
+    background-color: #fff;
+    border: 2px solid #231f20;
+    font-size: 16px;
+    border-radius: 0;
+    margin-bottom: 15px;
+    padding: 0px 10px;
+}
+#login_password{
+    width: 350px;
+    height: 50px;
+    background-color: #fff;
+    border: 2px solid #231f20;
+
+    border-radius: 0;
+    margin-bottom: 15px;
+    padding: 0px 10px;
+}
+#login{
+    padding: 30px, 50px;
+    background-color: #231f20;
+    color: #fff;
+    height: 50px;
+    width: 180px;
+    margin-bottom: 100px;
+    margin-left: 198px;
+                margin-top: 15px;
+
+}
+#reg-button{
+    text-align: center;
+}
+#register{
+    padding: 30px, 50px;
+    background-color: #231f20;
+    color: #fff;
+    height: 50px;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+
+}
+#massage-signout{
+    display: flex;
+justify-content: space-between;
+margin-left: 25px;
+    margin-right: 25px;
+}
+#logout{
+    background-color: #231f20;
+    color: #fff;
+    width: 130px;
+    height: 30px;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+#point{
+    margin-left: 100px;
+}
+#reg-head h1{
+    text-align: center;
+    
+}
+
+        #register:hover {
+        background-color: gray;
+            cursor: pointer;
+        }
+        #login:hover {
+            background-color: gray;
+                cursor: pointer;
+            }
+            #gmail{
+                text-align: center;
+            }
+            #pass{
+                text-align: center;
+            }
+            #forget a {
+                color: #231f20;
+                /* margin-left: 198px; */
+            }
+        
+            #head-sign{
+                text-align: center;
+                font-weight: bolder;
+            }
+
+           /* @media screen and (max-width: 868px) {
+                #main {
+                    display: flex;
+                    flex-direction: column;
+                }
+    
+                #sign,
+                #reg {
+                    width: 100%;
+                }
+            }
+
+            
+            
+
+            @media screen and (max-width: 868px)  {
+                #main {
+                    display: flex;
+                    flex-direction: column;
+                
+                }
+                div{
+                    width: 100%;
+                }
+            }
+           */
+
+
+            /* signUp */
+
+            @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap');
+body,input,button{
+    font-family: 'Urbanist', sans-serif;
+}
+h1{
+    text-align: center;
+    font-size: 64px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+#main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-left: 150px;
+    margin-right: 100px;
+    
+    
+}
+
+input{
+    width: 530px;
+    height: 40px;
+    margin : 10px 0px;
+    background-color: #fff;
+    border: 3px solid #231f20;
+    padding: 10px 10px;
+
+
+    border-radius: 2px;
+
+}
+#country{
+    width: 553px;
+    height: 63px;
+    margin: 10px 0px;
+    background-color: #fff;
+    border: 3px solid #231f20;
+padding: 10px 10px;
+    border-radius: 2px;
+}
+#register{
+    background-color: #231f20;
+    color: #fff;
+    height: 55px;
+    width: 200px;
+    margin : 0px 10px;
+    margin-bottom: 95px;
+}
+#sign button{
+   width: 20%;
+  margin: auto;
+  /* margin-left: 40%; */
+  margin-top: 2%;
+   
+}
+#main > div{
+    margin: 10px;
+}
+/*@media screen and (max-width: 968px) {
+    #main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+}*/
+
+@media screen and (min-width: 300px) and (max-width: 800px) {
+  
+    #main {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin: auto;
+    }
+
+
+    #main {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input  {
+        font-size: 14px;
+        width: 90%;
+        margin: 5px 0;
+    }
+
+    #point li {
+        font-size: 16px;
+    }
+
+   
+    #login_email, #login_password {
+        width: 80%;
+        margin: 5px auto;
+    }
+
+  
+
+    #reg, #sign {
+        
+        margin: auto;
+        text-align: center;
+    }
+
+    #sign button{
+   width: 50%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+   
+}
+}
+/* Responsive layout adjustments for screens between 700px and 1200px */
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+    /* Medium-sized tablets and smaller PCs */
+    #main {
+        margin: 0 auto;
+    }
+}
+
+
+
+
+/* =========signup respo */
+@media screen and (min-width: 300px) and (max-width: 800px) {
+
+#Signupmain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+  }
+
+  #Signupmain #country ,.country {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+    /* Medium-sized tablets and smaller PCs */
+    #Signupmain {
+       display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+    }
+}

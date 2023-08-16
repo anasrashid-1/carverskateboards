@@ -1,0 +1,69 @@
+
+
+
+
+/* .container {
+  display: flex;
+  
+  height: 150px;
+  width: 100%; 
+  max-width: 450px; 
+  border: 2px solid rgb(16, 15, 15);
+  align-items: center;
+  justify-content: center;
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 0px;
+} */
+
+.container{
+  z-index: 99999;
+    position: absolute;
+    padding: 20px;
+    background-color: white;
+    right: 68px;
+    top: 100px;
+}
+.innerContainer {
+  display: flex;
+ flex-direction: row;
+  height: auto !important;
+  width: 100%; /* Make it take the full width of the parent */
+  max-width: 450px; /* Set a maximum width to prevent it from becoming too wide */
+  padding: 10px; /* Add some padding for better spacing */
+  align-items: center;
+}
+.Emailcontainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust the margin as needed to move the container higher */
+}
+
+button{
+  width: 40%;
+}
+.logocontainer img {
+  width: 5%; /* Make the image responsive by using a percentage width */
+  aspect-ratio: 1; /* Set a maximum width to prevent it from becoming too large */
+  display: block; /* Ensures the image doesn't exceed its container */
+  margin: auto  auto; /* Center the image horizontally */
+}
+input{
+  border: 2px solid black;
+  width: 60%;
+}
+
+@media (max-width: 767px) {
+  button{
+    width: 80%;
+  }
+  input{
+    border: 2px solid black;
+    width: 80%;
+  }
+  .innerContainer {
+    display: flex;
+   flex-direction: column;
+   
+  }
+}

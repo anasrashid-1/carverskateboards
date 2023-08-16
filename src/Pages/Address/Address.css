@@ -1,0 +1,76 @@
+.address {
+    background-color: white;
+    width: 49%;
+    margin: 20px 29%;
+    padding: 10px 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+#addressForm {
+    display: grid;
+    width: 35%;
+    /* margin: 0 30% */
+}
+
+#addressForm>input {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    /* background-color: rgb(230, 230, 230); */
+}
+
+#cityInfo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#cityInfo input {
+    padding: 10px;
+    margin: 10px;
+    width: 140px;
+    /* background-color: rgb(230, 230, 230); */
+}
+
+#submit:hover {
+    background-color: rgb(202, 202, 84);
+}
+
+@media only screen and (min-width: 761px) and (max-width: 1115px) {
+    .address {
+        width: 40%;
+        margin: 0 20%;
+    }
+    #addressForm {
+        width: 80%;
+    }
+    #addressForm input {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:431px) and (max-width: 760px) {
+    .address {
+        width: 50%;
+        margin: 0 20%;
+    }
+    #addressForm {
+        width: 80%;
+    }
+    #addressForm input {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .address {
+        width: 92%;
+        margin: 0 10px;
+    }
+    #addressForm {
+        width: 80%;
+    }
+    #addressForm input {
+        width: 100%;
+    }
+}
