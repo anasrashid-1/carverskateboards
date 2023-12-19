@@ -1,0 +1,69 @@
+body {
+    background-color: rgb(230, 230, 230);
+}
+
+.payment-section {
+    display: flex;
+    /* width: 50%; */
+    margin: 10px;
+}
+
+.checkoutCard {
+    display: flex;
+    margin: 10px;
+}
+
+.checkoutCard img {
+    width: 12%;
+    height: 12%;
+}
+
+#date {
+    font-size: 12px!important;
+    line-height: 18px!important;
+    font-family: montserrat-regular, sans-serif!important;
+    margin-left: 10px;
+    margin-top: -15px;
+    text-align: left;
+}
+
+#title {
+    /* font-size: 13px;
+    margin: 5px; */
+    font-size: 12px!important;
+    line-height: 18px!important;
+    font-family: montserrat-regular, sans-serif!important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: gray;
+    padding: 5px;
+}
+
+.address-name {
+    width: 70%;
+    text-align: left;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.orderTotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    margin: 10px;
+    font-size: 17px;
+}
+
+#payment-btn {
+    width: 100%;
+    background-color: rgb(202, 202, 84);
+    padding: 15px;
+    border: none;
+}
+
+@media only screen and (max-width: 760px) {
+    .payment-section {
+        display: block;
+    }
+}

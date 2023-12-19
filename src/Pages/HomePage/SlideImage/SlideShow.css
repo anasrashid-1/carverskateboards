@@ -1,0 +1,167 @@
+/* .slideshow-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slideshow {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  } */
+  
+
+  /* .slideshow-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slideshow {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .pagination-dot {
+    font-size: 24px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .pagination-dot.active {
+    opacity: 0.7;
+  } */
+
+
+
+
+
+
+
+
+
+
+
+  /* .slideshow-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slideshow {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    position: relative;
+  }
+  
+  .arrow {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .pagination-dot {
+    font-size: 24px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .pagination-dot.active {
+    opacity: 0.7;
+  } */
+
+  
+  
+
+  
+  .slideshow {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 800px; 
+  }
+  
+
+  .slideshow-container {
+    position: relative;
+    overflow: hidden;
+    max-height: 800px 
+  }
+  
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+  
+  .arrow {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    color: white; 
+    background-color: black; 
+    /* border-radius: 50%;  */
+    height: 40px;
+  }
+  
+  .arrow.left {
+    /* margin:10px;  */
+    /* height: 100px; */
+  }
+  
+  .arrow.right {
+    /* margin-left:35% ;  */
+    /* height: 100px; */
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+    /* margin-left: 40%; */
+  }
+  
+  .pagination-dot {
+    font-size: 50px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .pagination-dot.active {
+    opacity: 0.7;
+  }
+
+  .slide{
+    width: 100%;
+  }
+  
+  .slide img{
+    max-width: -webkit-fill-available;
+  }
+
+  @media (max-width: 767px) {
+    
+  }
