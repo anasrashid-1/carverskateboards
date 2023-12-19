@@ -1,6 +1,6 @@
 Welcome to our collaborative web development project! This project involves creating various pages for an e-commerce website. Each team member has been assigned specific responsibilities for different pages.
 
-## Team Members and Responsibilities
+
 
 - **Anas**
   - Responsible for the Product Page and Product Description Page.
